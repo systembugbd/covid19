@@ -9,9 +9,9 @@ const totalTestsToday = document.getElementById("totalTestsToday");
 const updateTime = document.getElementById("updateTime");
 const covid19SearchInput = document.getElementById("covid19SearchInput");
 const covid19SearchBtn = document.getElementById("covid19SearchBtn");
-let head = document.getElementsByTagName('head')[0];
-let title =   document.getElementsByTagName('title');
-let title2 =   document.getElementById('title');
+// let head = document.getElementsByTagName('head')[0];
+// let title =   document.getElementsByTagName('title');
+// let title2 =   document.getElementById('title');
 
 const populateDataInRow = document.getElementById("populateDataInRow");
 
@@ -25,7 +25,7 @@ window.onload = callApiAll(API);
  
 
 covid19SearchInput.addEventListener("keypress", function (e) {
-  e.preventDefault();
+ 
   // console.log(e.target.value)
   if (e.target.value != "") {
     if (e.key == "Enter") {
@@ -108,6 +108,14 @@ document.title+=metaInfo;
   head.appendChild(`<meta property="twitter:card" content="${metaInfo}">`);
  
 // $('head').appendChild(title);
+  // let title = document.createElement('title');
+
+  //     title.innerHTML = metaInfo;
+  // let heads  = document.getElementsByTagName('head')[0];
+ 
+  //     console.log(heads.appendChild(title));
+  //     console.log(heads);
+  //     console.log(title);
 
   $('meta[property="og:title"]').replaceWith('<meta property="og:title" content="'+metaInfo+'">');
   $('meta[property="twitter:title"]').replaceWith('<meta property="twitter:title" content="'+metaInfo+'">');
