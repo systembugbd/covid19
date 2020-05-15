@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Coronavirus Update Live By Shaheb</title>
+    <meta name="description" content="Live statistics and coronavirus news tracking the number of confirmed cases, recovered patients, tests, and death toll due to the COVID-19 coronavirus from Wuhan, China. Coronavirus counter with new cases, deaths, and number of tests per 1 Million population. Historical data and info. Daily charts, graphs, news and updates">
+
+
+    <meta property="og:title" content="Coronavirus Update Live By Shaheb">
+    <meta property="og:description" content="Live statistics and coronavirus news tracking the number of confirmed cases, recovered patients, tests, and death toll due to the COVID-19 coronavirus from Wuhan, China. Coronavirus counter with new cases, deaths, and number of tests per 1 Million population. Historical data and info. Daily charts, graphs, news and updates">
+    <meta property="og:image" content="img/bangladesh_with_covid19.jpg">
+    <meta property="og:url" content="https://corona-live-24.herokuapp.com/">
+
+
+    <meta name="twitter:title" content="Coronavirus Update Live By Shaheb">
+    <meta name="twitter:description" content="Live statistics and coronavirus news tracking the number of confirmed cases, recovered patients, tests, and death toll due to the COVID-19 coronavirus from Wuhan, China. Coronavirus counter with new cases, deaths, and number of tests per 1 Million population. Historical data and info. Daily charts, graphs, news and updates">
+    <meta name="twitter:image" content="img/bangladesh_with_covid19.jpg">
+    <meta name="twitter:card" content="Coronavirus Update Live By Shaheb">
+
+
+    <link rel="icon" href="img/favicon.png" id="faviconIcon" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="css/animate.css" />
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="css/all.css" />
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/nice-select.css" />
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="css/slick.css" />
+    <!-- style CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+
+ 
+ 
+
+h1 {
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 3em;
+	text-align: center;
+	opacity: .8;
+	order: 1;
+}
+
+h1 small {
+	display: block;
+}
+
+.site {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+  align-items: center;
+	flex-direction: column;
+	margin: 0 auto;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+
+.sketch {
+	position: relative;
+	height: 400px;
+	min-width: 400px;
+	margin: 0;
+	overflow: visible;
+	order: 2;
+	
+}
+
+.bee-sketch {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.red {
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-1.png) no-repeat center center;
+	opacity: 1;
+	animation: red 3s linear infinite, opacityRed 5s linear alternate infinite;
+}
+
+.blue {
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-1.png) no-repeat center center;
+	opacity: 0;
+	animation: blue 3s linear infinite, opacityBlue 5s linear alternate infinite;
+}
+
+
+@media only screen and (min-width: 780px) {
+  .site {
+		flex-direction: row;
+		padding: 1em 3em 1em 0em;
+	}
+	
+	h1 {
+		text-align: right;
+		order: 2;
+		padding-bottom: 2em;
+		padding-left: 2em;
+
+	}
+	
+	.sketch {
+		order: 1;
+	}
+}
+
+
+@keyframes blue {
+	0% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-1.png) 
+  }
+	9.09% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-2.png) 
+  }
+	27.27% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-3.png) 
+  }
+	36.36% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-4.png) 
+  }
+	45.45% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-5.png) 
+  }
+	54.54% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-6.png) 
+  }
+	63.63% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-7.png) 
+  }
+	72.72% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-8.png) 
+  }
+	81.81% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-9.png) 
+  }
+	100% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-1.png) 
+  }
+}
+
+@keyframes red {
+	0% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-1.png) 
+  }
+	9.09% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-2.png) 
+  }
+	27.27% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-3.png) 
+  }
+	36.36% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-4.png) 
+  }
+	45.45% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-5.png) 
+  }
+	54.54% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-6.png) 
+  }
+	63.63% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-7.png) 
+  }
+	72.72% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-8.png) 
+  }
+	81.81% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-9.png) 
+  }
+	100% {
+		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-1.png) 
+  }
+}
+
+@keyframes opacityBlue {
+	from {
+		opacity: 0
+	}
+	25% {
+		opacity: 0
+	}
+	75% {
+		opacity: 1
+	}
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes opacityRed {
+	from {
+		opacity: 1
+	}
+	25% {
+		opacity: 1
+	}
+	75% {
+		opacity: .3
+	}
+	to {
+		opacity: .3
+	}
+}
+    </style>
+</head>
+
+<body>
+    <!--::header part start::-->
+    <header class="main_menu home_menu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="/">
+                            <img src="img/favicon.png" width="64" height="auto" alt="logo" id="logo" />
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="menu_icon"><i class="fas fa-bars"></i></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/">#Covid19 <span style="color:red;">live</span>
+                                        <img src="img/live_logo.png" width="20" height="auto" /> Update</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/covid19">#Covid19 Bangladesh <span style="color:red;">live</span>
+                                        <img src="img/live_logo.png" width="20" height="auto" /> In Details</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="btn_1 d-none d-lg-block" href="https://www.facebook.com/shaheb.ali.nadim">FollowUs</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header part end-->
+
+    <!-- banner part start-->
+    <section class="banner_part">
+        <div class="container">
+            <div class="row">
+              
+                <div class="site">
+                    <div class="sketch">
+                        <div class="bee-sketch red"></div>
+                        <div class="bee-sketch blue"></div>
+                    </div>
+                
+                <h1>404:
+                    <small>Covid19 Virus Details Not Found</small></h1>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- banner part start-->
+
+    <!-- banner part start-->
+    <section class="search_your_country">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="search_form">
+                        <form action="#">
+                            <div class="form-row">
+                                <div class="col-lg-9">
+                                    <div class="search_form_iner">
+                                        <input type="text" class="form-control"
+                                            placeholder="Please Enter City or Country"
+                                            aria-label="RPlease Enter City or Country" aria-describedby="button-addon4"
+                                            id="covid19SearchInput" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <a href="#" class="search_btn" id="covid19SearchBtn">search</a>
+                                </div>
+                            </div>
+                            <span style="color: #bd08ff;">Please Hit Enter to Get Result, of your desired
+                                location</span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 search_heading" style="text-align: center;">
+                    <h1>CORONA AFFECTED COUNTRY WITH <span style="color:red;">LIVE <img src="img/live_logo.png" width="40" height="auto"></span> UPDATE</h1>
+                    <div class="panel panel-primary">...</div>
+                </div>
+
+                <div class="col-sm-12" id="masterHistory">
+                    <table id="selectedColumn" class="table table-responsive table-striped table-bordered table-sm" cellspacing="0" width="100%">
+
+                        <caption>
+                            List of users
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">
+                                    Country Other
+                                </th>
+                                <th scope="col">Total Case</th>
+                                <th scope="col">New Cases</th>
+                                <th scope="col">Total Deaths</th>
+                                <th scope="col">Total Recovered</th>
+                                <th scope="col">Active Cases</th>
+                                <th scope="col">Serious, Critical</th>
+                                <th scope="col">Tot Cases 1m Pop</th>
+                                <th scope="col">Deaths / 1m Pop</th>
+                                <th scope="col">Total Tests</th>
+                                <th scope="col">Tests / 1m Pop</th>
+                            </tr>
+                        </thead>
+                        <tbody id="populateDataInRow">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <img src="img/animate_icon/Shape-1.png" alt="" class="feature_icon_1" />
+        <img src="img/animate_icon/Shape-2.png" alt="" class="feature_icon_2" />
+    </section>
+    <!-- banner part start-->
+
+    <!--::footer_part start::-->
+    <footer class="footer_part">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="single_footer_part">
+                        <h4>About Agency</h4>
+                        <p>
+                            The world has become so fast paced that people don’t want to
+                            stand by reading a page of information, they would much rather
+                            look at a presentation and understand the message. It has come
+                            to a point where images
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="single_footer_part">
+                        <h4>Navigation Links</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">team</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="single_footer_part">
+                        <h4>Newsletter</h4>
+                        <p>
+                            Heaven fruitful doesn't over lesser in days. Appear creeping
+                            seasons deve behold bearing days open
+                        </p>
+                        <div id="mc_embed_signup">
+                            <form target="_blank"
+                                action="#"
+                                method="get" class="subscribe_form relative mail_part">
+                                <input type="email" name="email" id="userInput" placeholder="Email Address"
+                                    class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Email Address'" />
+                                <button type="submit" name="submit" id="newsletter-submit"
+                                    class="email_icon newsletter-submit button-contactForm" onclick="getInputValue();">
+                                    <i class="far fa-paper-plane"></i>
+                                </button>
+                                <div class="mt-10 info"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="copyright_text">
+                        <p>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            2020 All rights reserved |
+                            <span style="color: #f8f5f5 !important;">This template is made with
+                                <em class="ti-heart" aria-hidden="true"></em> by
+                                <a href="https://colorlib.com" target="_blank"
+                                    style="color: #f8f5f5 !important;">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer_icon social_icon">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="single_social_icon"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="single_social_icon"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="single_social_icon"><i class="fas fa-globe"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="single_social_icon"><i class="fab fa-behance"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="img/overlay_2.png" alt="#" class="footer_overlay" />
+    </footer>
+    <!--::footer_part end::-->
+
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- particles js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <!-- slick js -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+    <script src="https://unpkg.com/axios@0.19.2/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+
+   
+</body>
+
+</html>
