@@ -9,6 +9,7 @@ const totalTestsToday = document.getElementById("totalTestsToday");
 const updateTime = document.getElementById("updateTime");
 const covid19SearchInput = document.getElementById("covid19SearchInput");
 const covid19SearchBtn = document.getElementById("covid19SearchBtn");
+const head = document.getElementsByTagName('head')[0];
 const title =   document.getElementsByTagName('title');
 
 const populateDataInRow = document.getElementById("populateDataInRow");
@@ -96,8 +97,14 @@ function covid19Report(data) {
   Total Test ${covid19report.tests},
   Recoverd ${covid19report.recovered}
   `;
-  document.title = metaInfo;
-  $('document.title').replaceWith('document.title="'+metaInfo+'">');
+document.title += metaInfo;
+  // $('document.title').replaceWith('document.title="'+metaInfo+'">');
+  // head.appendChild(title);
+  // document.getElementsByTagName('head')[0].appendChild(title.innerHTML = metaInfo);
+  head.appendChild(`<meta property="og:title" content="${metaInfo}">`);
+  head.appendChild(`<meta property="twitter:title" content="${metaInfo}">`);
+  head.appendChild(`<meta property="twitter:card" content="${metaInfo}">`);
+
   $('meta[property="og:title"]').replaceWith('<meta property="og:title" content="'+metaInfo+'">');
   $('meta[property="twitter:title"]').replaceWith('<meta property="twitter:title" content="'+metaInfo+'">');
   $('meta[property="twitter:card"]').replaceWith('<meta property="twitter:card" content="'+metaInfo+'">');
